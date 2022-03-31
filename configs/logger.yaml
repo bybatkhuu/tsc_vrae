@@ -1,0 +1,22 @@
+logger:
+    level: "INFO"
+    use_color: true
+    use_icon: false
+    use_backtrace: true
+    std_format_str: "[<c>{time:YYYY-MM-DD HH:mm:ss.SSS Z}</c> | <level>{lvlname:<5}</level> | <w>{file}</w>:<w>{line}</w>]: <level>{message}</level>"
+    use_log_file: false
+    file_format_str: "[{time:YYYY-MM-DD HH:mm:ss.SSS Z} | {lvlname:<5} | {file}:{line}]: {message}"
+    rotate_when:
+        at_hour: 0
+        at_minute: 0
+        at_second: 0
+    rotate_file_size: 10000000
+    backup_file_count: 50
+    file_encoding: utf8
+    all_log_filename: "{app_name}.std.all.log"
+    err_log_filename: "{app_name}.std.err.log"
+    use_log_json: false
+    use_custom_json: false
+    json_all_log_filename: "{app_name}.json.all.log"
+    json_err_log_filename: "{app_name}.json.err.log"
+    # logs_dir: /var/log/app

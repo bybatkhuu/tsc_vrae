@@ -1,0 +1,37 @@
+tsc_vrae:
+    vrae:
+        cuda: True                      # options: True, False
+        gpu_id: 0
+        batch_size: 16
+        n_epochs: 200
+        print_every: 1
+        save_each_epoch: 10
+        hidden_size: 200                # Recommended
+        hidden_layer_depth: 2           # Recommended
+        latent_length: 10               # Recommended
+        optimizer: 'Adam'               # options: 'Adam', 'SGD'
+        learning_rate: 1e-5             # 1e-5 => 0.00001
+        dropout_rate: 0.2
+        max_grad_norm: 5
+        loss: 'MSELoss'                 # options: 'SmoothL1Loss', 'MSELoss'
+        block: 'LSTM'                   # options: 'LSTM', 'GRU'
+        clip: True                      # options: True, False
+
+    dbscan:
+        eps: 0.015
+        min_samples: 3
+        algorithm: 'auto'               # options: 'auto', 'ball_tree', 'kd_tree', 'brute'
+        leaf_size: 30
+        n_jobs: null                    # null means 1 and -1 means using all processors
+
+    kmeans:
+        n_clusters: 5
+        n_init: 10
+        max_iter: 300
+        algorithm: 'auto'               # options: 'auto', 'full', 'elkan'
+        verbose: 0
+        random_state: null
+
+    const:
+        model_files_suffix: 'tsc_vrae'
+        low_lim_train_data: 10
