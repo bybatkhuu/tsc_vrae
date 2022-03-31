@@ -7,7 +7,7 @@ Time series clustering VRAE.
 
 * Time-series clustering
 * Variational recurrent auto-encoders
-* Pytorch/Tensorflow
+* Pytorch
 
 ---
 
